@@ -1,0 +1,13 @@
+const express = require('express');
+const path = require('path');
+const http = require('http');
+
+const app = express();
+const server = http.createServer(app);
+
+server.listen(80);
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+console.log('Servidor Rodando na porta 80')
+
