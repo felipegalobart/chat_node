@@ -5,9 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Olá Mundo!!!!!</h1><br>
-    <h2>Chat</h2>
+    
+    <div class="page" id="loginPage">
+        <h1>Qual o seu nome?</h1>
+        <input type="text" id="loginNameInput">
+    </div>
+
+    <div class="page" id="chatPage">
+        <div class="chatArea">
+            <ul class="chatList">
+                <li class="m-status" >Fulano entrou na sala</li>
+                <li class="m-status" >Fulano saiu na sala</li>
+                <li class="m-txt"><span class="me">Felipe</span> Olá, tudo bem?</li>
+                <li class="m-txt"><span>Bruna</span> Tudo, e você??</li>
+            </ul>
+            <ul class="userList">
+                <li>&#9989; Felipe (você)</li>
+                <li>&#9989; Bruna</li>
+                <li>&#9989; Montserrat</li>
+                <li>&#9989; Vladimir</li>
+            </ul>
+        </div>
+        <div class="chatInput">
+            <input type="text" id="chatTextInput" placeholder="Digite uma mensagem e aperte (ENTER)">
+        </div>
+    </div>
 </body>
 </html>
