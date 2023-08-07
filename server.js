@@ -11,9 +11,20 @@ server.listen(80);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+let connectedUsers = [];
+
 console.log('Servidor Rodando na porta 80')
 
 io.on('connection', (socket) => {
     console.log("Conexão detectada....");
+
+    socket.on('join-request', (userName) => {
+        socket.userName = userName;
+        connectedUsers.push(userName);
+        console.log(connectedUsers);
+
+        socket.emit('user-ok', connectedUsers);
+    })
+
 });
 
